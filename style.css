@@ -2,6 +2,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f0f0;  /* Light gray background */
 }
 
 header, nav, main, footer {
@@ -13,6 +14,7 @@ header, nav, main, footer {
 
 h1, h2 {
   margin: 0.5rem 0;
+  font-weight: bold; /* Add some boldness to headings */
 }
 
 nav ul {
@@ -38,14 +40,12 @@ a:hover {
 .optional {  /* Style for hiding optional section */
   display: none;
 }
-body {
-  background-color: #f0f0f0;  /* Light gray background */
+
+#slideshow img {  /* Style for slideshow image */
+  width: 50%;  /* Adjust image width as needed */
+  border: 1px solid #ddd;  /* Add a subtle border */
 }
 
-header h1, header h2 {
-  color: #3399ff;  /* Blue for technology/innovation */
-}
-
-a:hover {
-  color: #007bff;  /* Darker blue accent */
+footer {
+  background-color: #ddd;  /* Light gray footer background */
 }
