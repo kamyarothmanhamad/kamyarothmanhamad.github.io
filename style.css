@@ -102,6 +102,11 @@ img {
     font-size: 2em;
   }
 
+  .pronunciation {
+  font-size: 0.8em;
+  color: #999;
+  }
+  
   nav ul li {
     display: block;
     margin: 0;
