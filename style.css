@@ -117,4 +117,20 @@ nav ul li a {
 display: block;
 padding: 10px;
 }
+
+.circle-frame {
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+  
 }
