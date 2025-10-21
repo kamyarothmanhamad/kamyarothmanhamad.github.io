@@ -13,6 +13,7 @@ body {
     background: #0a0a0a;
     position: relative;
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 body::before {
@@ -126,6 +127,22 @@ main {
     margin-top: 80px;
     position: relative;
     z-index: 1;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+}
+
+main > h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.2),
+        0 -1px 0 rgba(0, 0, 0, 0.6),
+        0 2px 4px rgba(0, 0, 0, 0.4);
+    color: rgba(240, 240, 245, 1);
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 section {
@@ -166,19 +183,21 @@ section {
     z-index: 1;
     font-weight: 700;
     letter-spacing: 2px;
+    color: rgba(240, 240, 245, 1);
 }
 
 #hero p {
     position: relative;
     z-index: 1;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(220, 220, 230, 0.85);
     font-weight: 500;
     letter-spacing: 1px;
+    font-size: 1.1rem;
 }
 
 .highlight {
-    color: #fff;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    color: rgba(245, 245, 250, 1);
+    text-shadow: 0 0 20px rgba(220, 220, 230, 0.4);
     font-weight: 900;
 }
 
@@ -194,7 +213,10 @@ h2 {
     letter-spacing: 2px;
 }
 
-#about, #skills, #contact, #interests, #research, #cv, #personal {
+#about, #skills, #contact, #interests, #research, #cv, #personal, 
+#current-research, #publications, #projects, #education, #experience, 
+#awards, #contact-info, #online-presence, #office-hours, #about-me, 
+#hobbies, #blog, #travel {
     background: linear-gradient(135deg, #a5a9b1 0%, #7d8189 50%, #5a5e66 100%);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -208,7 +230,11 @@ h2 {
     overflow: hidden;
 }
 
-#about::after, #skills::after, #contact::after {
+#about::after, #skills::after, #contact::after, #interests::after,
+#current-research::after, #publications::after, #projects::after,
+#education::after, #experience::after, #awards::after,
+#contact-info::after, #online-presence::after, #office-hours::after,
+#about-me::after, #hobbies::after, #blog::after, #travel::after {
     content: '';
     position: absolute;
     top: 0;
@@ -219,11 +245,19 @@ h2 {
     transition: left 0.6s ease;
 }
 
-#about:hover::after, #skills:hover::after, #contact:hover::after {
+#about:hover::after, #skills:hover::after, #contact:hover::after, #interests:hover::after,
+#current-research:hover::after, #publications:hover::after, #projects:hover::after,
+#education:hover::after, #experience:hover::after, #awards:hover::after,
+#contact-info:hover::after, #online-presence:hover::after, #office-hours:hover::after,
+#about-me:hover::after, #hobbies:hover::after, #blog:hover::after, #travel:hover::after {
     left: 100%;
 }
 
-#about:hover, #skills:hover, #contact:hover {
+#about:hover, #skills:hover, #contact:hover, #interests:hover,
+#current-research:hover, #publications:hover, #projects:hover,
+#education:hover, #experience:hover, #awards:hover,
+#contact-info:hover, #online-presence:hover, #office-hours:hover,
+#about-me:hover, #hobbies:hover, #blog:hover, #travel:hover {
     transform: translateY(-3px);
     box-shadow: 
         0 12px 48px rgba(0, 0, 0, 0.9),
@@ -232,12 +266,16 @@ h2 {
         0 0 30px rgba(180, 190, 200, 0.3);
 }
 
-#about p, #interests p, #research p, #cv p, #personal p, #contact p {
+#about p, #interests p, #research p, #cv p, #personal p, #contact p,
+#current-research p, #publications p, #projects p, #education p, 
+#experience p, #awards p, #contact-info p, #online-presence p, 
+#office-hours p, #about-me p, #hobbies p, #blog p, #travel p {
     text-shadow: 
         0 1px 0 rgba(255, 255, 255, 0.15),
         0 -1px 0 rgba(0, 0, 0, 0.5);
     color: rgba(40, 40, 45, 0.95);
     font-weight: 500;
+    font-size: 1.05rem;
 }
 
 .skills-grid {
@@ -316,6 +354,81 @@ h2 {
     letter-spacing: 1.5px;
 }
 
+#research h3, #cv h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.2),
+        0 -1px 0 rgba(0, 0, 0, 0.7),
+        0 2px 3px rgba(0, 0, 0, 0.5);
+    color: rgba(30, 30, 35, 1);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+#research h3:first-of-type, #cv h3:first-of-type {
+    margin-top: 0;
+}
+
+#research h4, #cv h4 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.15),
+        0 -1px 0 rgba(0, 0, 0, 0.6),
+        0 1px 2px rgba(0, 0, 0, 0.4);
+    color: rgba(35, 35, 40, 1);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#current-research h4, #publications h4, #projects h4, 
+#education h4, #experience h4, #blog h4 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.15),
+        0 -1px 0 rgba(0, 0, 0, 0.6),
+        0 1px 2px rgba(0, 0, 0, 0.4);
+    color: rgba(35, 35, 40, 1);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#current-research h4:first-of-type, #publications h4:first-of-type, 
+#projects h4:first-of-type, #education h4:first-of-type, 
+#experience h4:first-of-type, #blog h4:first-of-type {
+    margin-top: 0;
+}
+
+.section-divider {
+    height: 2px;
+    margin: 2.5rem 0;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.4), 
+        rgba(255, 255, 255, 0.2), 
+        rgba(0, 0, 0, 0.4));
+    box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.3),
+        0 -1px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+.item-divider {
+    height: 1px;
+    margin: 1.5rem 0;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.3), 
+        rgba(255, 255, 255, 0.15), 
+        rgba(0, 0, 0, 0.3));
+    box-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.2),
+        0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
 .publication, .project, .cv-item, .blog-post {
     background: rgba(30, 30, 40, 0.4);
     padding: 1.5rem;
@@ -337,8 +450,9 @@ h2 {
 
 .publication p, .project p, .cv-item p {
     margin-bottom: 0.5rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(200, 200, 210, 0.9);
     font-weight: 400;
+    font-size: 1.05rem;
 }
 
 .awards-list, .hobbies-list {
@@ -350,15 +464,32 @@ h2 {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(40, 40, 45, 0.9);
     font-weight: 400;
+    font-size: 1.05rem;
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.12),
+        0 -1px 0 rgba(0, 0, 0, 0.45);
 }
 
 .awards-list li::before, .hobbies-list li::before {
     content: '▸';
     position: absolute;
     left: 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(60, 60, 65, 0.8);
+}
+
+#online-presence a, #contact-info a {
+    color: rgba(40, 40, 45, 0.95);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(40, 40, 45, 0.5);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+#online-presence a:hover, #contact-info a:hover {
+    color: rgba(20, 20, 25, 1);
+    border-bottom-color: rgba(20, 20, 25, 0.8);
 }
 
 .contact-info a {
@@ -376,8 +507,8 @@ h2 {
 
 .date {
     font-style: italic;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
+    color: rgba(180, 180, 190, 0.85);
+    font-size: 0.95rem;
 }
 
 footer {
@@ -415,5 +546,16 @@ footer p {
     
     nav a {
         font-size: 0.9rem;
+    }
+    
+    body {
+        font-size: 15px;
+    }
+    
+    #about p, #interests p, #research p, #cv p, #personal p, #contact p,
+    #current-research p, #publications p, #projects p, #education p, 
+    #experience p, #awards p, #contact-info p, #online-presence p, 
+    #office-hours p, #about-me p, #hobbies p, #blog p, #travel p {
+        font-size: 1rem;
     }
 }
